@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchUserService } from '../search-user.service';
+import { User } from '../user';
+import { Repos } from '../repos';
+
 
 @Component({
   selector: 'app-search',
@@ -7,7 +11,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
-  constructor() { }
+  users: User[];
+  repos: Repos[];
+
+  constructor(private userData: SearchUserService) { }
+
 
   ngOnInit() {
   }
