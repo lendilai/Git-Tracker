@@ -1,5 +1,6 @@
 export class User {
-  login: string;
+  name: string;
+  login: number;
   avatar_url: any;
   followers_url: number;
   following_url: number;

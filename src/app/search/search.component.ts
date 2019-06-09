@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { SearchUserService } from '../search-user.service';
 import { User } from '../user';
 import { Repos } from '../repos';
+import { environment } from '../../environments/environment';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -11,20 +13,23 @@ import { Repos } from '../repos';
 })
 export class SearchComponent implements OnInit {
 
+  userName = '';
   users: User[];
   repos: Repos[];
+  errorMessage;
 
   constructor(private userData: SearchUserService) { }
 
-  public getUser(event: any){
+  public getUsers(event: any){
     let promise = new Promise((resolve, reject)=>{
-      this.userData.getUser(this.userName).toPromise().then(response => {
+      this.userData.getUsers(this.userName).toPromise().then(response => {
         this.users = response;
+        this.users = Array.of(this.users);
 
         resolve();
       },
       error => {
-        this.users =  "An unexpected error has occurred";
+        this.errorMessage =  "An unexpected error has occurred";
       }
     );
   });
@@ -39,10 +44,11 @@ export class SearchComponent implements OnInit {
         resolve();
       },
       error => {
-        this.repos =  "An unexpected error has occurred";
+        this.errorMessage =  "An unexpected error has occurred";
       }
     );
   });
+
   return promise;
   }
   ngOnInit() {

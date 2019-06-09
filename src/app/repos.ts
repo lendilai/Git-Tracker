@@ -4,4 +4,5 @@ export class Repos {
   html_url: string;
   stargazers_count: number;
   updated_at: string;
+  
 }

@@ -1,2 +1,5 @@
 <input type="text" name="userName" [(ngModel)]="userName">
-<button type="submit" name="button" (click)=getUser()></button>
+<button type="submit" name="button" (click)=getUsers()></button>
+<ul *ngFor='let user of users'>
+  <li>{{user.name}}</li>
+</ul>
