@@ -4,7 +4,7 @@ export class User {
   followers_url: number;
   following_url: number;
   public_repos: string;
-  created_at: date
+  created_at: string;
   html_url: string;
   bio: string;
 }
