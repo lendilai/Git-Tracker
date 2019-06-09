@@ -1,7 +1,48 @@
-<form>
-  <input type="text" name="userName" [(ngModel)]="userName">
-  <button type="submit" name="button" id="send" (click)=getUsers()></button>
-</form>
-<ul *ngFor='let user of users'>
-  <li>{{user.login}}</li>
-</ul>
+<div class="container-fluid">
+  <div class="bg">
+    <img src="./assets/top.jpg" alt="Background" class="img-fluid top">
+  </div>
+
+  <div class="col-lg-6 tag-line">
+    <h3>Find Whoever you want on Git</h3>
+  </div>
+
+
+
+
+
+
+  <form>
+    <h4>Search User-Name:</h4>
+    <div class="md-form mb-5 input">
+      <i class="fas fa-user prefix grey-text"></i>
+      <input type="text" name="userName" [(ngModel)]="userName" class="form-control validate" placeholder="Username">
+    </div>
+    <button type="submit" name="button" id="send" (click)="getUsers(); getRepos();" class="btn btn-outline-primary waves-effect px-3"><i class="fas fa-search"></i></button>
+  </form>
+  <div class="user-find">
+    <div class="card">
+      <div class="content">
+        <div class="post sec">
+
+          <div class="counter"></div>
+
+        </div>
+      </div>
+      <div class="fabs">
+        <div class="fab"></div>
+        <i class="avatar zmdi zmdi-account"></i>
+      </div>
+      <div class="user">
+        <div class="profiles">
+          <div class="profile"><span>51</span>Upvoted</div>
+          <div class="profile"><span>9</span>Created</div>
+          <div class="profile"><span>9</span>Showcased</div>
+          <div class="profile"><span>1</span>Collections</div>
+          <div class="profile"><span>2</span>Followers</div>
+          <div class="profile"><span>5</span>Following</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

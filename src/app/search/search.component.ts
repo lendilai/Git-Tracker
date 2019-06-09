@@ -57,6 +57,35 @@ export class SearchComponent implements OnInit {
       event.preventDefault();
       $("#send").click();
     })
+
+    $(document).ready(function(){
+      $('.avatar').click(function(e) {
+      $('.card').toggleClass('active');
+       });
+var target, ink, d, x, y;
+$(".social").click(function(e) {
+  target = $(this);
+  if (target.find(".ink").length === 0)
+    target.prepend("<span class='ink'></span>");
+
+  ink = target.find(".ink");
+  ink.removeClass("animate");
+  if (!ink.height() && !ink.width()) {
+    d = Math.max(target.outerWidth(), target.outerHeight());
+    ink.css({
+      height: d,
+      width: d
+    });
+  }
+  x = e.pageX - target.offset().left - ink.width() / 2;
+  y = e.pageY - target.offset().top - ink.height() / 2;
+
+  ink.css({
+    top: y + 'px',
+    left: x + 'px'
+  }).addClass("animate");
+});
+    })
   }
 
 
