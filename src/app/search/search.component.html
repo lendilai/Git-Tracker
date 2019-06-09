@@ -1,9 +1,9 @@
 <div class="container-fluid">
-  <div class="bg col-lg-12">
+  <div class="bg">
     <img src="./assets/top.jpg" alt="Background" class="img-fluid top">
   </div>
 
-  <div class="col-lg-6 tag-line">
+  <div class="tag-line">
     <h3>Find Whoever you want on Git</h3>
   </div>
 
@@ -14,7 +14,7 @@
 
   <form>
     <h4>Search User-Name:</h4>
-    <div class="md-form mb-5 input">
+    <div class="md-form input">
       <i class="fas fa-user prefix grey-text"></i>
       <input type="text" name="userName" [(ngModel)]="userName" class="form-control validate" placeholder="Username">
     </div>
@@ -41,18 +41,16 @@
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-lg-4">
-      <div class="card" *ngFor="let repo of repos">
-        <h3 class="card-header primary-color white-text text-uppercase font-weight-bold text-center py-5">{{repo.name}}</h3>
-        <div class="card-body">
-          <ul class="list-group">
-            <li class="list-group-item d-flex justify-content-between align-items-center">{{repo.description}}</li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">Stars</li>
-            <span class="badge badge-primary badge-pill">{{repo.stargazers_count}}</span>
-            <li class="list-group-item d-flex justify-content-between align-items-center">{{repo.updated_at}}</li>
-          </ul>
-        </div>
+  <div class="card-columns">
+    <div class="card" *ngFor="let repo of repos">
+      <h3 class="card-header primary-color white-text text-uppercase font-weight-bold text-center py-5">{{repo.name}}</h3>
+      <div class="card-body">
+        <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between align-items-center">{{repo.description}}</li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">Stars</li>
+          <span class="badge badge-primary badge-pill">{{repo.stargazers_count}}</span>
+          <li class="list-group-item d-flex justify-content-between align-items-center">{{repo.updated_at}}</li>
+        </ul>
       </div>
     </div>
   </div>

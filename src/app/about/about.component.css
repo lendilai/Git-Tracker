@@ -1,0 +1,13 @@
+* {
+  text-align: center;
+}
+
+.about-top {
+  width: 100%;
+  height: 100vh;
+  background-color: lightgrey;
+}
+
+.about-top h2 {
+  padding-top: 13%;
+}

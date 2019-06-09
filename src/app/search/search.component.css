@@ -4,6 +4,10 @@
   text-align: center;
 }
 
+.bg {
+  top: 0;
+}
+
 .top {
   height: 20vw;
   width: 100%;
