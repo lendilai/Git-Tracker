@@ -8,4 +8,5 @@ export class User {
   created_at: string;
   html_url: string;
   bio: string;
+  location: string;
 }

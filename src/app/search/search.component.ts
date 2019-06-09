@@ -60,7 +60,7 @@ export class SearchComponent implements OnInit {
 
     $(document).ready(function(){
       $('.avatar').click(function(e) {
-      $('.card').toggleClass('active');
+      $('.card-user').toggleClass('active');
        });
 var target, ink, d, x, y;
 $(".social").click(function(e) {

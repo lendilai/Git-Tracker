@@ -15,7 +15,7 @@
   margin: auto;
 }
 
-.card {
+.card-user {
   height: 400px;
   width: 300px;
   background: #fff;
@@ -28,7 +28,7 @@
   transition: all 0.2s ease-in-out;
 }
 
-.card:hover {
+.card-user:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 

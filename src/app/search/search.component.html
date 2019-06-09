@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <div class="bg">
+  <div class="bg col-lg-12">
     <img src="./assets/top.jpg" alt="Background" class="img-fluid top">
   </div>
 
@@ -20,28 +20,24 @@
     </div>
     <button type="submit" name="button" id="send" (click)="getUsers(); getRepos();" class="btn btn-outline-primary waves-effect px-3"><i class="fas fa-search"></i></button>
   </form>
-  <div class="user-find">
-    <div class="card">
-      <div class="content">
-        <div class="post sec">
-
-          <div class="counter"></div>
-
-        </div>
+  <div class="card-user">
+    <div class="content">
+      <div class="post sec">
+        <div class="counter"></div>
       </div>
-      <div class="fabs">
-        <div class="fab"></div>
-        <i class="avatar zmdi zmdi-account"></i>
-      </div>
-      <div class="user">
-        <div class="profiles">
-          <div class="profile"><span>51</span>Upvoted</div>
-          <div class="profile"><span>9</span>Created</div>
-          <div class="profile"><span>9</span>Showcased</div>
-          <div class="profile"><span>1</span>Collections</div>
-          <div class="profile"><span>2</span>Followers</div>
-          <div class="profile"><span>5</span>Following</div>
-        </div>
+    </div>
+    <div class="fabs">
+      <div class="fab"></div>
+      <i class="avatar zmdi zmdi-account"></i>
+    </div>
+    <div class="user" *ngFor="let user of users">
+      <div class="profiles">
+        <div class="profile"><span>Name</span>{{user.name}}</div>
+        <div class="profile"><span>Joined on</span>{{user.created_at}}</div>
+        <div class="profile"><span>Followers</span>{{user.followers}}</div>
+        <div class="profile"><span>Following</span>{{user.following}}</div>
+        <div class="profile"><span>Repos</span>{{user.public_repos}}</div>
+        <div class="profile"><span>Location</span>{{user.location}}</div>
       </div>
     </div>
   </div>
