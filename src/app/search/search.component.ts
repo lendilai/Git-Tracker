@@ -4,6 +4,7 @@ import { User } from '../user';
 import { Repos } from '../repos';
 import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs';
+import * as $ from 'jquery';
 
 
 @Component({
@@ -52,6 +53,11 @@ export class SearchComponent implements OnInit {
   return promise;
   }
   ngOnInit() {
+    $(document).ready(function(){
+      event.preventDefault();
+      $("#send").click();
+    })
   }
+
 
 }
