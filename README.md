@@ -46,7 +46,7 @@ If you don't want to run the app from your local browser you can acces it throug
 
 
 ## Known bugs
-There is a bug in the linking of the pages.
+There are no known bugs as of now. If you come across any, feel free to contact me.
 
 ## Development server
 
