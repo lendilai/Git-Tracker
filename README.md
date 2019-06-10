@@ -45,10 +45,6 @@ If you don't want to run the app from your local browser you can acces it throug
 | View the user's repos | Scroll down to the repos section | A list of the user's repos is shown |
 
 
-## Demo
-![](src/assets/)
-
-
 ## Known bugs
 There is a bug in the linking of the pages.
 
