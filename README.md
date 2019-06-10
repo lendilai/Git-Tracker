@@ -30,6 +30,10 @@ If you don't want to run the app from your local browser you can acces it throug
 - The user's avatar is displayed and you can click on the user icon to view the details.
 - You can also view the user on github by clicking the button.
 
+
+## Demo
+![](src/assets/demo.gif)
+
 ## Technologies used
 * [HTML & CSS](https://www.w3schools.com/html/html_css.asp) - HTML used to create the backbone of the application whereas CSS was used to style the elements.
 * [Javascript](https://www.javascript.com/) - This was used to improve user interactivity and to build on the business logic of the project.
