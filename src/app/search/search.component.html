@@ -2,29 +2,17 @@
   <div class="bg">
     <img src="./assets/top.jpg" alt="Background" class="img-fluid top">
   </div>
-
-  <div class="tag-line">
-    <h3>Find Whoever you want on Git</h3>
-  </div>
-
-
-
-
-
-
   <form>
-    <h4>Search User-Name:</h4>
+    <i class="fas fa-user prefix grey-text"></i>
     <div class="md-form input">
-      <i class="fas fa-user prefix grey-text"></i>
       <input type="text" name="userName" [(ngModel)]="userName" class="form-control validate" placeholder="Username">
     </div>
     <button type="submit" name="button" id="send" (click)="getUsers(); getRepos();" class="btn btn-outline-primary waves-effect px-3"><i class="fas fa-search"></i></button>
   </form>
   <div class="card-user">
-    <div class="content">
-      <div class="post sec">
-        <div class="counter"></div>
-      </div>
+    <div class="content" *ngFor="let user of users">
+      <img src="{{user.avatar_url}}" alt="User-avatar" class="img-fluid the-user">
+      <h3 class="the-username">{{user.name}}</h3>
     </div>
     <div class="fabs">
       <div class="fab"></div>
@@ -32,12 +20,12 @@
     </div>
     <div class="user" *ngFor="let user of users">
       <div class="profiles">
-        <div class="profile"><span>Name</span>{{user.name}}</div>
-        <div class="profile"><span>Joined on</span>{{user.created_at}}</div>
-        <div class="profile"><span>Followers</span>{{user.followers}}</div>
-        <div class="profile"><span>Following</span>{{user.following}}</div>
-        <div class="profile"><span>Repos</span>{{user.public_repos}}</div>
-        <div class="profile"><span>Location</span>{{user.location}}</div>
+        <div class="profile"><span>Name</span>{{user.login}}</div>
+        <div class="profile"><span>Joined on</span>{{user.created_at | date:'shortDate'}}</div>
+        <div class="profile"><span><i class="fas fa-users"> Followers</i></span>{{user.followers}}</div>
+        <div class="profile"><span><i class="fas fa-user-friends"> Following</i></span>{{user.following}}</div>
+        <div class="profile"><span><i class="fas fa-folder-open"></i></span>{{user.public_repos}}</div>
+        <div class="profile"><span><i class="fas fa-map-marker-alt"></i></span>{{user.location}}</div>
       </div>
     </div>
   </div>
@@ -47,9 +35,9 @@
       <div class="card-body">
         <ul class="list-group">
           <li class="list-group-item d-flex justify-content-between align-items-center">{{repo.description}}</li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">Stars</li>
-          <span class="badge badge-primary badge-pill">{{repo.stargazers_count}}</span>
-          <li class="list-group-item d-flex justify-content-between align-items-center">{{repo.updated_at}}</li>
+          <li class="list-group-item d-flex justify-content-between align-items-center"><i class="far fa-star"> Starred: </i><span class="badge badge-primary badge-pill">{{repo.stargazers_count}}</span></li>
+
+          <li class="list-group-item d-flex justify-content-between align-items-center"><i class="far fa-clock"> Last Updated:</i> {{repo.updated_at | date:'mediumDate'}}</li>
         </ul>
       </div>
     </div>
