@@ -1,0 +1,27 @@
+nav {
+  width: 100%;
+  padding: 20px;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5)
+}
+
+nav ul {
+  text-align: left;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  padding: 15px;
+  color: white;
+}
+
+nav ul li a:hover {
+  color: lightblue;
+}
+
+nav a.active {
+  color: yellow;
+}
