@@ -9,7 +9,6 @@ import { Repos } from './repos';
   providedIn: 'root'
 })
 export class SearchUserService {
-
   constructor(private http: HttpClient) { }
 
   getUsers(userName: string): Observable<User[]>{

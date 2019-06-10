@@ -7,7 +7,7 @@
     <div class="md-form input">
       <input type="text" name="userName" [(ngModel)]="userName" class="form-control validate" placeholder="Username">
     </div>
-    <button type="submit" name="button" id="send" (click)="getUsers(); getRepos();" class="btn btn-outline-primary waves-effect px-3"><i class="fas fa-search"></i></button>
+    <button type="submit" name="button" id="send" (click)="getUsers($event); getRepos($event);" class="btn btn-outline-primary waves-effect px-3"><i class="fas fa-search"></i></button>
   </form>
   <div class="card-user">
     <div class="content" *ngFor="let user of users">
