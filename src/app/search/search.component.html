@@ -25,7 +25,7 @@
         <div class="profile"><span><i class="fas fa-users"> Followers</i></span>{{user.followers}}</div>
         <div class="profile"><span><i class="fas fa-user-friends"> Following</i></span>{{user.following}}</div>
         <div class="profile"><span><i class="fas fa-folder-open"></i></span>{{user.public_repos}}</div>
-        <div class="profile"><span><i class="fas fa-map-marker-alt"></i></span>{{user.location}}</div>
+        <div class="profile"><span>Github</span><a class="git" href="{{user.html_url}}" target="_blank"><i class="fas fa-angle-double-right animated wobble infinite"></i></a></div>
       </div>
     </div>
   </div>
@@ -38,6 +38,7 @@
           <li class="list-group-item d-flex justify-content-between align-items-center"><i class="far fa-star"> Starred: </i><span class="badge badge-primary badge-pill">{{repo.stargazers_count}}</span></li>
 
           <li class="list-group-item d-flex justify-content-between align-items-center"><i class="far fa-clock"> Last Updated:</i> {{repo.updated_at | date:'mediumDate'}}</li>
+          <li class="list-group-item d-flex justify-content-between align-items-center"> Checkout on github: <a href="{{repo.html_url}}" target="_blank" class="btn tbn-md btn-dark"><i class="fas fa-shoe-prints"></i></a></li>
         </ul>
       </div>
     </div>
