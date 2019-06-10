@@ -15,7 +15,7 @@ import * as $ from 'jquery';
 export class SearchComponent implements OnInit {
 
   userName = '';
-  users: User[];
+  users;
   repos: Repos[];
   errorMessage;
 
@@ -25,7 +25,7 @@ export class SearchComponent implements OnInit {
     let promise = new Promise((resolve, reject)=>{
       this.userData.getUsers(this.userName).toPromise().then(response => {
         this.users = response;
-        // this.users = Array.of(this.users);
+        this.users = Array.of(this.users);
 
         resolve();
       },
