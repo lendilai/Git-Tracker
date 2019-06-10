@@ -73,7 +73,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## LICENSE
-The application is under an [MIT License](https://github.com/lendilai/Git-Tracker/blob/master/LICENSE.txt).
+The application is under an [MIT License](https://github.com/lendilai/Git-Tracker/blob/master/License.txt).
 
 
 ## Contact Information
